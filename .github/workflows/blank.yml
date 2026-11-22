@@ -1,0 +1,15 @@
+name: InstaBox CI
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    runs-on: instabox-medium
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Test InstaBox
+        run: echo "KizzMD Connected to InstaBox!"
